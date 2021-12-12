@@ -1,0 +1,169 @@
+:root {
+  --desktop: 1440px;
+  --mobile: 375px;
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  margin: auto;
+}
+
+.card {
+  width: 360px;
+  height: 600px;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border: none;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 375px) {
+
+  .card {
+    width: 300px;
+    height: 500px;
+    margin: auto;
+  }
+
+}
+
+.card-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.equilibrium-img {
+  width: 100%;
+  border: none;
+  /* border-radius: 20px; */
+}
+
+.card-img .hover-img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: 0 auto;
+  display: none;
+}
+
+.card-img:hover {
+  background-color: var(--cyan);
+  cursor: pointer;
+}
+
+.card-img:hover .equilibrium-img {
+  opacity: 0.5;
+}
+
+.card-img:hover .hover-img {
+  display: block;
+}
+
+.card-title {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.card-title:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.card-description {
+  color: var(--soft-blue);
+  font-size: 18px;
+}
+
+.card-stats,
+.card-credit {
+  font-weight: 300;
+}
+
+.card-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+  border-bottom: 1px solid var(--line);
+}
+
+.card-stats img {
+  margin-right: 5px;
+}
+
+.card-eth {
+  color: var(--cyan);
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.card-time-remaining {
+  color: var(--soft-blue);
+  display: flex;
+  align-items: center;
+}
+
+.card-credit {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.card-credit img {
+  height: 30px;
+  width: auto;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 375px) {
+
+  .card-credit {
+    margin-top: 0px;
+  }
+
+}
+
+.card-credit-creation {
+  color: var(--soft-blue);
+}
+
+.card-creator {
+  font-weight: bold;
+}
+
+.card-creator:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  display: none;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
